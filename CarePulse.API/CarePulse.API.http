@@ -1,0 +1,6 @@
+@CarePulse.API_HostAddress = http://localhost:5057
+
+GET {{CarePulse.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

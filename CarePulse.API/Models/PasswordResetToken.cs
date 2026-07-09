@@ -1,0 +1,15 @@
+using System.Text.Json.Serialization;
+
+namespace CarePulse.API.Models;
+
+public class PasswordResetToken
+{
+    public int PasswordResetTokenId { get; set; }
+    public int UserId { get; set; }
+    public string Token { get; set; } = string.Empty;
+    public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
+    public DateTime ExpiryDate { get; set; }
+
+    [JsonIgnore]
+    public User? User { get; set; }
+}
